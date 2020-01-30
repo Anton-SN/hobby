@@ -1,0 +1,110 @@
+.Card {
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+    font-size: 30px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.Front, 
+.Back {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    position: absolute; 
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+.Front {
+    background: lightgreen;
+}
+
+.Top_Rigth {
+    width: 90px;
+    height: 50px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin: 0 0 auto auto;
+}
+
+.Top_Left {
+    width: 200px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin: 0 0 auto 0;
+}
+
+.Card__Number {
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.Card__NumberFocus {
+    border: 1px solid black;
+}
+
+.Card__Holder {
+    height: 50px;
+    width: 250px;
+    font-size: 22px;
+    border-radius: 10px;
+    margin: auto auto 0 0;
+}
+
+.Card__HolderFocus {
+    border: 1px solid black;
+}
+
+.Card__Date {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    margin: auto 0 0 auto;
+}
+
+.Card__DateFocus {
+    border: 1px solid black;
+}
+
+.Back {
+    padding: 50px 0;
+    background: lightseagreen;
+    transform: rotateY(180deg);
+}
+
+.Card__Line {
+    height: 50px;
+    background: black;
+    width: 100%;
+}
+
+.Card__Cvv {
+    height: 50px;
+    /* border: 1px solid black; */
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 20px auto auto;
+}
+
+.Card__CvvFocus {
+    border: 1px solid black;
+}
+
+.Card__FrontFocus {
+    transform: rotateY(180deg);
+}
+
+.Card__BackFocus {
+    transform: rotateY(360deg);
+}

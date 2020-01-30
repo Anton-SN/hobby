@@ -17,7 +17,7 @@ export default class Header extends Component {
               <Link to="/about">Обо мне</Link>
             </li>
             <li>
-              <Link to="/app">Приложения</Link>
+              <Link to="/apps">Приложения</Link>
             </li>
           </ul>
       </div>

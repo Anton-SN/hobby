@@ -1,25 +1,23 @@
-import React, { Component } from "react";
-import logo from "../../../images/logo.svg";
-import "./Hacks.css";
+import React from "react";
+import { Route, Switch, useRouteMatch, Link} from 'react-router-dom'
 
-export default class Home extends Component {
-  render() {
+import "./Hacks.css";
+import Card from "./Card/Card";
+
+export default function Home() {
+  const { path }= useRouteMatch();
     return (
-      <div className="App">
-        <header className="App-header">
-          <a href="https://reactjs.org">
-            <img src={logo} className="App-logo" alt="logo" />
-          </a>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hacks
-          </a>
-        </header>
+      <div className="content">
+        <h2>Фичи</h2>
+        <ul>
+          <li>
+            <Link to="/hacks/card">Банковская карта</Link>
+          </li>
+        </ul>
+        <p>Туту будет горизонтальное меню начальниха</p>
+        <Switch>
+          <Route path={`${path}/card`} component={Card}></Route>
+        </Switch>
       </div>
     );
-  }
 }
