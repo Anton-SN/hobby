@@ -9,19 +9,21 @@ export default class CardImage extends Component {
             <div className={styles.Card}>
                 <div className={`${styles.Front} ${changeParam === 'cvv' ? styles.Card__FrontFocus : null}`}>
                     <div className={styles.Top_Left}>
+                        <p>Batman_Bank</p>
                         <div className={styles.Bank__Logo}></div>
                         <div className={styles.Bank__Title}></div>
                     </div>
                     <div className={styles.Top_Rigth}>
-                        <div className={styles.Card__Type}></div>
+                        <div className={styles.Card__Type}><p>Batman_Card</p></div>
                     </div>
-                    <div className={`${styles.Card__Number} ${changeParam === 'number' ? styles.Card__NumberFocus : null}`}>{number}</div>
-                    <div className={`${styles.Card__Holder} ${changeParam === 'name' ? styles.Card__HolderFocus : null}`}>{name}</div>
-                    <div className={`${styles.Card__Date} ${changeParam === 'data' ? styles.Card__DateFocus : null}`}>{month}/{year}</div>
+                    <div className={`${styles.Card__Number} ${changeParam === 'number' ? styles.Card__Focus : null}`}>{number}</div>
+                    <div className={`${styles.Card__Holder} ${changeParam === 'name' ? styles.Card__Focus : null}`}>{name}</div>
+                    <div className={`${styles.Card__Date} ${changeParam === 'data' ? styles.Card__Focus : null}`}>{month}/{year}</div>
                 </div>
                 <div className={`${styles.Back} ${changeParam === 'cvv' ? styles.Card__BackFocus : null}`}>
                     <div className={styles.Card__Line}></div>
-                    <div className={`${styles.Card__Cvv} ${changeParam === 'cvv' ? styles.Card__CvvFocus : null}`}>{cvv}</div>
+                    <div className={styles.Back__Title}>Batman</div>
+                    <div className={`${styles.Card__Cvv} ${changeParam === 'cvv' ? styles.Card__Focus : null}`}>{cvv}</div>
                 </div>
             </div>
         )

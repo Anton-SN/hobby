@@ -27,20 +27,29 @@
     background: lightgreen;
 }
 
+
+.Back {
+    padding: 50px 0;
+    background: lightseagreen;
+    transform: rotateY(180deg);
+}
+
 .Top_Rigth {
-    width: 90px;
-    height: 50px;
     border: 1px solid blue;
     border-radius: 10px;
     margin: 0 0 auto auto;
 }
 
 .Top_Left {
-    width: 200px;
-    height: 50px;
     border: 1px solid red;
     border-radius: 10px;
     margin: 0 0 auto 0;
+}
+
+.Top_Left  p,
+.Top_Rigth  p {
+    margin: 0;
+    padding: 10px;
 }
 
 .Card__Number {
@@ -48,11 +57,12 @@
     width: 90%;
     border-radius: 10px;
     margin: auto;
+    transition: 1s;
 }
 
-.Card__NumberFocus {
+/* .Card__NumberFocus {
     border: 1px solid black;
-}
+} */
 
 .Card__Holder {
     height: 50px;
@@ -60,11 +70,12 @@
     font-size: 22px;
     border-radius: 10px;
     margin: auto auto 0 0;
+    transition: 1s;
 }
 
-.Card__HolderFocus {
+/* .Card__HolderFocus {
     border: 1px solid black;
-}
+} */
 
 .Card__Date {
     height: 50px;
@@ -73,15 +84,9 @@
     margin: auto 0 0 auto;
 }
 
-.Card__DateFocus {
+/* .Card__DateFocus {
     border: 1px solid black;
-}
-
-.Back {
-    padding: 50px 0;
-    background: lightseagreen;
-    transform: rotateY(180deg);
-}
+} */
 
 .Card__Line {
     height: 50px;
@@ -91,14 +96,30 @@
 
 .Card__Cvv {
     height: 50px;
-    /* border: 1px solid black; */
     width: 150px;
     border-radius: 10px;
     margin: 0 20px auto auto;
 }
 
-.Card__CvvFocus {
+.Back__Title {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    margin: auto auto 0 20px;
+}
+
+/* .Card__CvvFocus {
     border: 1px solid black;
+} */
+
+.Card__Focus {
+    z-index: 3;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+    /* opacity: 0; */
+    /* pointer-events: none; */
+    /* overflow: hidden; */
+    border: 2px solid rgba(255, 255, 255, 0.65);
 }
 
 .Card__FrontFocus {

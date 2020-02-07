@@ -36,6 +36,7 @@ export default class Card extends Component {
                 />
                 <CardInput 
                     onChange={this.handleData}
+                    params={this.state}
                 />
             </div>
         )

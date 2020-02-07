@@ -5,12 +5,12 @@ export default class CardInput extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            number: '#### #### #### ####',
-            name: 'Full Name',
-            month: 'MM',
-            year: 'YY',
-            cvv: 'CVV',
-            changeParam: null
+            number: this.props.params.number,
+            name: this.props.params.name,
+            month: this.props.params.month,
+            year: this.props.params.year,
+            cvv: this.props.params.cvv,
+            changeParam: this.props.params.changeParam
         }
     }
 
