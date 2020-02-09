@@ -7,7 +7,12 @@ export default class Card extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            number: '#### #### #### ####',
+            number: [
+                "#", "#", "#", "#", " ",
+                "#", "#", "#", "#", " ",
+                "#", "#", "#", "#", " ",
+                "#", "#", "#", "#"
+            ],
             name: 'Full Name',
             month: 'MM',
             year: 'YY',

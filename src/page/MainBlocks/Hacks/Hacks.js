@@ -14,7 +14,7 @@ export default function Home() {
             <Link to="/hacks/card">Банковская карта</Link>
           </li>
         </ul>
-        <p>Туту будет горизонтальное меню начальниха</p>
+        <p>Тут будет горизонтальное меню</p>
         <Switch>
           <Route path={`${path}/card`} component={Card}></Route>
         </Switch>

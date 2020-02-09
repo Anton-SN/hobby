@@ -15,19 +15,29 @@ export default class CardInput extends Component{
     }
 
     handleNumber = number => {
-        let value = number.target.value.replace(/[^\d]/g, '').substring(0,16);
-        value = value !== '' ? value.match(/.{1,4}/g).join(' ') : '';
-        number.target.value = value;
-        this.setState({
-            number: value,
-        }, () => {
-            this.props.onChange({ ...this.state })
-        })
+        // нужно переделать ввод
+        let valueInput = number.nativeEvent.data;
+        let valueIndex = number.target.value.replace(/[^\d]/g, '').substring(0,16);
+        valueIndex = valueIndex !== '' ? valueIndex.match(/.{1,4}/g).join(' ') : '';
+        number.target.value = valueIndex;
+        this.setState(
+            prevState => ({
+              number: prevState.number.map((elem, index) => {
+                  return (index === valueIndex.length - 1)? valueInput: elem
+              }),
+            }),
+            () => {
+              this.props.onChange({ ...this.state });
+            },
+          );
     }
 
     handleHolder = name => {
         let value = name.target.value.toUpperCase()
         name.target.value = value;
+        if (value === '') {
+            value = 'Full Name';
+        }
         this.setState({
             name: value,
         }, () => {
@@ -38,6 +48,9 @@ export default class CardInput extends Component{
     handleMonth = month => {
         let value = month.target.value.slice(0, 2)
         month.target.value = value;
+        if (value === '') {
+            value = 'MM';
+        }
         this.setState({
             month: value,
         }, () => {
@@ -48,8 +61,11 @@ export default class CardInput extends Component{
     handleYear = year => {
         let value = year.target.value.slice(0, 4)
         year.target.value = value;
+        if (value === '') {
+            value = 'YY';
+        }
         this.setState({
-            year: year.target.value,
+            year: value,
         }, () => {
             this.props.onChange({ ...this.state })
         })
@@ -58,8 +74,11 @@ export default class CardInput extends Component{
     handleCvv = cvv => {
         let value = cvv.target.value.slice(0, 3)
         cvv.target.value = value;
+        if (value === '') {
+            value = 'CVV';
+        }
         this.setState({
-            cvv: cvv.target.value,
+            cvv: value,
         }, () => {
             this.props.onChange({ ...this.state })
         })
