@@ -4,7 +4,8 @@
 
 По мере развития моих навыков, проект будет дорабатываться и совершенствоваться.
 
-### A.C
+### A.C.
+##
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
