@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className = "header">
-        <h1>Ссылки</h1>
+        <h1>Ссылки Хеадер</h1>
           <ul className = "header__links links">
             <li>
               <Link to="/hacks">Фичи</Link>
