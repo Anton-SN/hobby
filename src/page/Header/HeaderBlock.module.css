@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    padding: 0px;
+}
+
+.header__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    list-style: none;
+    margin: 0 20px;
+}
