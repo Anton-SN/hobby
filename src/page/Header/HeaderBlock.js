@@ -22,30 +22,28 @@ export default class Header extends Component {
   }
   render() {
 
-    const allyProps = (index) => {
-      return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,}
-    }
+  const allyProps = (index) => {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,}
+  }
 
-    const linksDate = [ 
-      { path: "/hacks", label: "Фичи", id:"0", }, 
-      { path: "/test", label: "Тестовые задания", id:"1", }, 
-      { path: "/about", label: "Обо мне", id:"2", }, 
-      { path: "/apps", label: "Приложения", id:"3", }, ];
+  const linksDate = [ 
+    { path: "/hacks", label: "Фичи", id:"0", }, 
+    { path: "/test", label: "Тестовые задания", id:"1", }, 
+    { path: "/about", label: "Обо мне", id:"2", }, 
+    { path: "/apps", label: "Приложения", id:"3", }, ];
       
-      const tabsElem = linksDate.map(link => 
-      <Tab 
-          key={link.id} 
-          className = {`${styles.header__link} ${styles.link}`} 
-          label={link.label}
-          {...allyProps(link.id)}
-          component={Link} 
-          to={link.path}
-      />
-      )
+    const tabsElem = linksDate.map(link => 
+    <Tab 
+        key={link.id} 
+        className = {`${styles.header__link} ${styles.link}`} 
+        label={link.label}
+        {...allyProps(link.id)}
+        component={Link} 
+        to={link.path}
+    />)
 
-    console.log(this)
     return (
       <div className = {styles.header}>
         <AppBar position="static">
