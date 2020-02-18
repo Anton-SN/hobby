@@ -98,11 +98,7 @@ export default class CardInput extends Component{
             <div className={styles.inputBlock}>
                 <div className={styles.inputItem}>
                     <p className={styles.inputItem__text}>Card Number</p>
-                    <input 
-                    name="number"
-                    type="text" 
-                    autoFocus
-                    onChange={this.handleNumber}
+                    <input name="number" type="text"autoFocus onChange={this.handleNumber}
                     onFocus={this.handleFocus}
                     maxLength={19}
                     ></input>
@@ -129,7 +125,7 @@ export default class CardInput extends Component{
                     ></input>
                     <input 
                     type="number" 
-                    name='data'
+                    name="data"
                     placeholder="Year" 
                     min="1950"
                     max="2020"

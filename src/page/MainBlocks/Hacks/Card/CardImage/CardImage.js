@@ -5,7 +5,6 @@ export default class CardImage extends Component {
     render() {
         const { number,name, month, year, cvv, changeParam } = this.props
         return (
-            // changeParam === null? null : styles
             <div className={styles.Card}>
                 <div className={`${styles.Front} ${changeParam === 'cvv' ? styles.Card__FrontFocus : null}`}>
                     <div className={styles.Top_Left}>
