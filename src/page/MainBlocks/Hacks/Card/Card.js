@@ -24,7 +24,6 @@ export default class Card extends Component {
     handleData = data => {
         this.setState({
             ...data
-        }, () => {
         })
     }
 
